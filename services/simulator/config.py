@@ -44,3 +44,29 @@ NATIONALITY = {"saudi": 0.60, "non_saudi": 0.40}
 
 SEED = 42
 N_CUSTOMERS = 1_000 
+
+
+N_MERCHANTS=500
+
+CATEGORIES = {
+    "fashion":     {"weight": 0.25, "risk_tier": "low",    "avg_ticket": 350,  "risk_shift":  0.00},
+    "grocery":     {"weight": 0.12, "risk_tier": "low",    "avg_ticket": 180,  "risk_shift": -0.20},
+    "beauty":      {"weight": 0.12, "risk_tier": "low",    "avg_ticket": 220,  "risk_shift":  0.00},
+    "health":      {"weight": 0.06, "risk_tier": "low",    "avg_ticket": 260,  "risk_shift": -0.10},
+    "home":        {"weight": 0.13, "risk_tier": "medium", "avg_ticket": 700,  "risk_shift":  0.05},
+    "travel":      {"weight": 0.08, "risk_tier": "medium", "avg_ticket": 1500, "risk_shift":  0.15},
+    "electronics": {"weight": 0.14, "risk_tier": "high",   "avg_ticket": 1400, "risk_shift":  0.35},
+    "jewelry":     {"weight": 0.06, "risk_tier": "high",   "avg_ticket": 1800, "risk_shift":  0.30},
+    "gift_cards":  {"weight": 0.04, "risk_tier": "high",   "avg_ticket": 400,  "risk_shift":  0.50},
+}   
+
+
+PLANS = {
+    "pay_in_3":        {"share": 0.45, "min": 50,  "max": 3000, "tenor_days": 60},
+    "pay_in_4":        {"share": 0.40, "min": 50,  "max": 2000, "tenor_days": 42},
+    "installments_6m": {"share": 0.15, "min": 500, "max": 5000, "tenor_days": 180},
+}
+
+
+ORDERS_PER_MONTH = 0.5      
+BASKET_SIGMA = 0.5  
