@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "numpy>=2.4.6",
     "pandas>=3.1.1",
+    "pandas-stubs>=3.1.0.261029",
     "pyarrow>=26.0.1",
 ]
 
