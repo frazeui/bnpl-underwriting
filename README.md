@@ -11,7 +11,7 @@ A Tamara-style Buy Now Pay Later underwriting system.
 ## Status
 - [x] Phase 0: infrastructure (k3d, Helm, repo)
 - [x] Phase 0: credit policy v1
-- [ ] Phase 0: data simulator
+- [x] Phase 0: data simulator (customers,orders,labels)
 - [ ] Phase 1: decision engine
 - [ ] Phase 3: agents
 - [ ] Phase 5: LLMOps
