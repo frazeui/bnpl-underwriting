@@ -39,7 +39,8 @@ def add_labels(rng, orders, customers):
 
     risk = build_risk_score(rng, orders, customers)
     true_pd = sigmoid(risk)
-    defaulted = rng.random(len(orders)) < true_pd
+    is_fraud=(orders["is_fraud_order"].to_numpy() if "is_fraud_order" in orders else np.zeros(len(orders),dtype=bool))
+    defaulted = (rng.random(len(orders)) < true_pd) | is_fraud
 
     labels = pd.DataFrame(
         {
@@ -48,6 +49,7 @@ def add_labels(rng, orders, customers):
             "label_known_date": orders["order_date"]
             + pd.Timedelta(days=cfg.LABEL_WINDOWS_DAYS),
             "true_pd": true_pd,
+            "is_fraud_order":is_fraud
         }
     )
 
