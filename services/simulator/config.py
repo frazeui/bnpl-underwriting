@@ -43,7 +43,7 @@ GENDER = {"male": 0.55, "female": 0.45}
 NATIONALITY = {"saudi": 0.60, "non_saudi": 0.40}
 
 SEED = 42
-N_CUSTOMERS = 1_000 
+N_CUSTOMERS = 1_00_000 
 
 
 N_MERCHANTS=500
